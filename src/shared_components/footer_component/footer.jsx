@@ -28,7 +28,7 @@ class Footer extends Component {
                                 <section className="cols col3 col-lg-4 col-12">
                                     <span className="subscribe-title titles">Subscribe to Newsletter</span>
                                     <form className="subscribe-box">
-                                        <input className="email inputs" type="email" name="email" placeholder="Email Address" />
+                                        <input className="email inputs" type="email" name="email" placeholder="Email Address" required />
                                         <input className="submit inputs" type="submit" value="Subscribe" />
                                     </form>
                                 </section>

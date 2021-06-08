@@ -1,5 +1,6 @@
 @import "../../assets/styles/placeholders.scss";
-@import "./menu-icon.css";
+@import "./menu_icon.css";
+@import "./search_bar.scss";
 
 .nav-holder {
     position: relative;
@@ -186,6 +187,13 @@
 @include media-breakpoint-down(md) {
     .nav-holder {
         .navbar {
+            .holder {
+                .nav-right {
+                    .main-search-box {
+                        display: none;
+                    }
+                }
+            }
             .dropdown-slide {
                 .dropdown-right {
                     width: 200px;

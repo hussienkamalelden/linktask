@@ -13,6 +13,13 @@ class Navbar extends Component {
         menu.classList.toggle('open');
         dropdown.classList.toggle('dropdown-tog');
     }
+    // onclick Expand Main Search Bar ..
+    expandSearch = () => {
+        document.querySelector(".search").style.visibility = "visible";
+        document.querySelector(".search").style.width = "85%";
+        document.querySelector(".submit-overlay").style.display = "none";
+        document.querySelector(".submit").style.backgroundColor = "#2d717b";
+    }
     render() {
         return (
             <React.Fragment>
@@ -31,9 +38,13 @@ class Navbar extends Component {
                                     </a>
                                 </section>
                                 <section className="nav-right">
-                                    <a className="main-logo" href="#">
-                                        <img src={logo} alt="link development logo" />
-                                    </a>
+                                    {/* Start Search Section */}
+                                    <form className="main-search-box">
+                                        <div className="submit-overlay" onClick={this.expandSearch}></div>
+                                        <input className="submit inputs" type="submit" value="" />
+                                        <input className="search inputs" type="search" name="search" placeholder="Search" required />
+                                    </form>
+                                    {/* End Search Section */}
                                 </section>
                             </div>
                             <section className="dropdown-slide">
@@ -73,7 +84,7 @@ class Navbar extends Component {
                                     {/* End Top Section */}
                                     {/* Start Search Section */}
                                     <form className="search-box">
-                                        <input className="search inputs" type="search" name="search" placeholder="Search" />
+                                        <input className="search inputs" type="search" name="search" placeholder="Search" required />
                                         <input className="submit inputs" type="submit" value="" />
                                     </form>
                                     {/* End Search Section */}
