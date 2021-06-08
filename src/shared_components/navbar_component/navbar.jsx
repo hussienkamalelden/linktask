@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import "./navbar_style.scss"
 import logo from "../../assets/images/logo.png"
-import { Link } from 'react-router-dom';
+import profile_pic from "../../assets/images/profile_pic.png"
+
 
 class Navbar extends Component {
     state = {}
@@ -82,6 +83,10 @@ class Navbar extends Component {
                                             <li className="nav-dropdown-bottom-li"><a className="nav-dropdown-main-links" href="#">Contact Us</a></li>
                                             <li className="nav-dropdown-bottom-li"><a className="nav-dropdown-main-links" href="#">Site Map</a></li>
                                         </ul>
+                                        <div className="user-acc">
+                                            <img className="profile-pic" src={profile_pic} alt="user image" />
+                                            <span className="username">User Name</span>
+                                        </div>
                                     </div>
                                     {/* End Bottom Section */}
                                 </div>

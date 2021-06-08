@@ -26,6 +26,7 @@
                 margin: 0 0 0 auto;
             }
         }
+        // Start Dropdown //
         .dropdown-slide {
             position: absolute;
             background-color: $primaryColor;
@@ -36,6 +37,7 @@
             height: 91vh;
             border-top: 1px solid $ninthColor;
             @include flex(start, start, row, wrap);
+            // Start Dropdown Left//
             .dropdown-left {
                 position: relative;
                 padding: 0 2.5rem;
@@ -62,6 +64,8 @@
                     }
                 }
             }
+            // End Dropdown Left//
+            // Start Dropdown Right//
             .dropdown-right {
                 position: relative;
                 padding: 1rem;
@@ -106,6 +110,7 @@
                         }
                     }
                 }
+                // Start Search Box//
                 .search-box {
                     display: none;
                     margin-top: 0.5rem;
@@ -140,19 +145,41 @@
                         }
                     }
                 }
+                // End Search Box//
                 .dropdown-right-bottom {
                     position: absolute;
                     left: 0;
                     bottom: 0;
+                    .user-acc {
+                        display: none;
+                        padding: 0 1rem 1rem;
+                        .profile-pic {
+                            border-radius: 50%;
+                            height: 35px;
+                            width: 35px;
+                        }
+                        .username {
+                            color: $whiteColor;
+                            margin-left: 10px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 110px;
+                            display: inline-block;
+                            margin-top: 5px;
+                        }
+                    }
                     .nav-dropdown-bottom-ul {
                         padding: 0 1rem;
                     }
                 }
             }
+            // End Dropdown Right//
         }
         .dropdown-tog {
             opacity: 1;
         }
+        // End Dropdown //
     }
 }
 // Start Media Query //
@@ -164,6 +191,11 @@
                     width: 200px;
                     .search-box {
                         @include flex(start, left, row, nowrap);
+                    }
+                    .dropdown-right-bottom {
+                        .user-acc {
+                            @include flex(start, start, row, wrap);
+                        }
                     }
                 }
             }
