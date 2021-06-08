@@ -1,5 +1,41 @@
-@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/placeholders.scss";
+@import "./menu-icon.css";
 
-.navbar {
-    background-color: $primaryColor;
+.nav-holder {
+    position: relative;
+    height: 65px;
+    .navbar {
+        background-color: $primaryColor;
+        height: 65px;
+        .holder {
+            position: relative;
+            @include flex(start, start, row, wrap);
+            width: 100%;
+            .nav-left {
+                @include flex(start, start, row, wrap);
+                .menu-icon {
+                    cursor: pointer;
+                    margin: 8px 30px 0 0;
+                }
+                .main-logo {
+                    width: 68px;
+                    height: 39px;
+                }
+            }
+            .nav-right {
+                margin: 0 0 0 auto;
+            }
+        }
+        .dropdown-slide {
+            position: absolute;
+            background-color: $primaryColor;
+            left: 0;
+            top: 65px;
+            transition: $transition-200ms;
+            opacity: 0;
+        }
+        .dropdown-tog {
+            opacity: 1;
+        }
+    }
 }
