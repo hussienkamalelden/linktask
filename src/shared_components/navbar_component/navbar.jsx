@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./navbar_style.scss"
 import logo from "../../assets/images/logo.png"
 import profile_pic from "../../assets/images/profile_pic.png"
-
+import { Dropdown } from "react-bootstrap"
 
 class Navbar extends Component {
     state = {}
@@ -45,6 +45,30 @@ class Navbar extends Component {
                                         <input className="search inputs" type="search" name="search" placeholder="Search" required />
                                     </form>
                                     {/* End Search Section */}
+                                    {/* Start Notifications Section */}
+                                    <Dropdown className="notif-dropdown">
+                                        <Dropdown.Toggle className="notif-dropdown-toggle" id="dropdown-basic">
+                                            <div className="notif-dropdown-icon-active"></div>
+                                            <i className="notif-dropdown-icon far fa-bell"></i>
+                                        </Dropdown.Toggle>
+                                        <Dropdown.Menu className="notif-dropdown-menu">
+                                            <span className="notif-dropdown-title">Recent Notifications</span>
+                                            <Dropdown.Item className="notif-drop-item" href="#/action-1">You have an upcoming appointment today! <span className="notif-item-highlight">Check-in Now</span></Dropdown.Item>
+                                            <Dropdown.Divider />
+                                            <Dropdown.Item className="notif-drop-item" href="#/action-2">Rate your last service appointment</Dropdown.Item>
+                                            <Dropdown.Divider />
+                                            <Dropdown.Item className="notif-drop-item" href="#/action-3">Your payment request has been approved</Dropdown.Item>
+                                            <Dropdown.Divider />
+                                            <Dropdown.Item className="notif-drop-item notif-drop-item-all" href="#/action-3">All Notifications<span className="arrow-right"></span></Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                    {/* End Notifications Section */}
+                                    {/* Start User Account Section */}
+                                    <div className="main-user-acc">
+                                        <img className="profile-pic" src={profile_pic} alt="user image" />
+                                        <span className="username">User Name</span>
+                                    </div>
+                                    {/* End User Account Section */}
                                 </section>
                             </div>
                             <section className="dropdown-slide">
