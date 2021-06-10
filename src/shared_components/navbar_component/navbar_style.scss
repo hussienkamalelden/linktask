@@ -2,6 +2,8 @@
 @import "./menu_icon.css";
 @import "./main_search_bar.scss";
 @import "./user_account.scss";
+@import "./notifications.scss";
+@import "./setting.scss";
 
 .nav-holder {
     position: relative;
@@ -27,112 +29,12 @@
             .nav-right {
                 margin: 0 0 0 auto;
                 display: flex;
-                // Start Notifications //
-                .notif-dropdown {
-                    margin: 0 1.5rem;
-                    .notif-dropdown-toggle {
-                        position: relative;
-                        background-color: transparent;
-                        border: none;
-                        box-shadow: none;
-                        height: 40px;
-                        .notif-dropdown-icon-active {
-                            position: absolute;
-                            height: 13px;
-                            width: 13px;
-                            top: 5px;
-                            right: 15px;
-                            border: 2px solid $primaryColor;
-                            border-radius: 50%;
-                            background-color: $firstColor;
-                        }
-                        .notif-dropdown-icon {
-                            font-size: 22px;
-                            line-height: 1.2;
-                        }
-                        &:hover {
-                            background-color: $firstColor;
-                            .notif-dropdown-icon-active {
-                                border-color: $firstColor;
-                                background-color: $whiteColor;
-                            }
-                        }
-                        &::after {
-                            border: none;
-                        }
-                    }
-                    .notif-dropdown-menu {
-                        width: 270px;
-                        .notif-dropdown-title {
-                            color: $eleventhColor;
-                            font-size: 13px;
-                            font-weight: 500;
-                            padding: 0 10px;
-                            margin-bottom: 0.3rem;
-                            display: block;
-                        }
-                        .notif-drop-item {
-                            white-space: normal;
-                            padding: 0 10px;
-                            font-size: 15px;
-                            .notif-item-highlight {
-                                color: $firstColorHover;
-                            }
-                            &:hover {
-                                background-color: transparent;
-                            }
-                        }
-                        .notif-drop-item-all {
-                            position: relative;
-                            color: $firstColorHover;
-                            text-align: center;
-                            font-weight: 500;
-                            transition: $transition-200ms;
-                            .arrow-right {
-                                position: absolute;
-                                margin-left: 10px;
-                                &:after {
-                                    content: "";
-                                    display: inline-block;
-                                    width: 0;
-                                    height: 0;
-                                    border-left: 5px solid $firstColorHover;
-                                    border-top: 5px solid transparent;
-                                    border-bottom: 5px solid transparent;
-                                    vertical-align: middle;
-                                }
-                                &:before {
-                                    width: 15px;
-                                    height: 2px;
-                                    background: $firstColorHover;
-                                    content: "";
-                                    display: inline-block;
-                                    vertical-align: middle;
-                                    transition: $transition-200ms;
-                                }
-                            }
-                            &:hover {
-                                color: $primaryColor;
-                                .arrow-right {
-                                    &:after {
-                                        border-left-color: $primaryColor;
-                                    }
-                                    &:before {
-                                        background: $primaryColor;
-                                        width: 20px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                // End Notifications //
                 // Start Main User Account //
                 .main-user-acc {
                     @extend .user-acc;
                     @include flex(start, start, row, wrap);
                     padding: 0;
-                    margin-top: 2px;
+                    margin: 2px 1.5rem 0 0;
                 }
                 // End Main User Account //
             }
@@ -261,25 +163,6 @@
                     position: absolute;
                     left: 0;
                     bottom: 0;
-                    // .user-acc {
-                    //     display: none;
-                    //     padding: 0 1rem 1rem;
-                    //     .profile-pic {
-                    //         border-radius: 50%;
-                    //         height: 35px;
-                    //         width: 35px;
-                    //     }
-                    //     .username {
-                    //         color: $whiteColor;
-                    //         margin-left: 10px;
-                    //         white-space: nowrap;
-                    //         overflow: hidden;
-                    //         text-overflow: ellipsis;
-                    //         max-width: 110px;
-                    //         display: inline-block;
-                    //         margin-top: 5px;
-                    //     }
-                    // }
                     .nav-dropdown-bottom-ul {
                         padding: 0 1rem;
                     }
@@ -302,6 +185,9 @@
                     .main-search-box,
                     .main-user-acc {
                         display: none;
+                    }
+                    .notif-dropdown {
+                        margin: 0 0.5rem 0 0;
                     }
                 }
             }

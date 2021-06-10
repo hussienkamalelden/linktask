@@ -69,6 +69,27 @@ class Navbar extends Component {
                                         <span className="username">User Name</span>
                                     </div>
                                     {/* End User Account Section */}
+                                    {/* Start Setting Section */}
+                                    <Dropdown className="setting-dropdown">
+                                        <Dropdown.Toggle className="setting-dropdown-toggle" id="dropdown-basic">
+                                        </Dropdown.Toggle>
+                                        <Dropdown.Menu className="setting-dropdown-menu">
+                                            <span className="setting-dropdown-title">Language</span>
+                                            <Dropdown.Item className="setting-drop-item" href="#/action-1">English <i class="setting-drop-item-icon fas fa-check"></i></Dropdown.Item>
+                                            <Dropdown.Item className="setting-drop-item" href="#/action-2">اللغة العربية</Dropdown.Item>
+                                            <Dropdown.Divider />
+                                            <span className="setting-dropdown-title">Font Size</span>
+                                            <div className="setting-drop-fonts-holder">
+                                                <Dropdown.Item className="setting-drop-item" href="#/action-3">A</Dropdown.Item>
+                                                <Dropdown.Item className="setting-drop-item" href="#/action-4"><span className="setting-item-highlight">A</span></Dropdown.Item>
+                                                <Dropdown.Item className="setting-drop-item" href="#/action-5">A</Dropdown.Item>
+                                            </div>
+                                            <Dropdown.Divider />
+                                            <span className="setting-dropdown-title">Account</span>
+                                            <Dropdown.Item className="setting-drop-item" href="#/action-6">Sign out</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                    {/* End Setting Section */}
                                 </section>
                             </div>
                             <section className="dropdown-slide">
