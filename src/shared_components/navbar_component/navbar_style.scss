@@ -46,7 +46,9 @@
             left: 0;
             top: 65px;
             transition: $transition-200ms;
+            visibility: hidden;
             opacity: 0;
+            display: none;
             height: 91vh;
             border-top: 1px solid $ninthColor;
             @include flex(start, start, row, wrap);
@@ -171,6 +173,7 @@
             // End Dropdown Right//
         }
         .dropdown-tog {
+            visibility: visible;
             opacity: 1;
         }
         // End Dropdown //
