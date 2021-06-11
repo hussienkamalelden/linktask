@@ -7,8 +7,18 @@ class LatestNews extends Component {
     render() {
         return (
             <React.Fragment>
-                <h1>LatestNews</h1>
-                <NewsCard />
+                <article className="latestnews">
+                    <div className="latestnews-holder">
+                        <div className="container">
+                            <h2 className="latestnews-title">LatestNews</h2>
+                            <div className="row">
+                                <NewsCard />
+                                <NewsCard />
+                                <NewsCard />
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </React.Fragment>
         );
     }
