@@ -45,7 +45,7 @@ class NewsCard extends Component {
                             {/* End Card Tags */}
 
                             {/* Start Card Paragraph */}
-                            <p className="news-card-p">{this.props.data.content}</p>
+                            <p className="news-card-p">{this.props.data.content != null ? this.props.data.content : this.props.data.description}</p>
                             {/* End Card Paragraph */}
 
                             {/* Start Card Date */}

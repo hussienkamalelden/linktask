@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import "./latestnews_style.scss"
+import "./news_holder_style.scss";
 import NewsCard from '../../../shared_components/news_card_component/news_card';
 import NewsApi from '../../../newsapi.json';
 import { Link } from "react-router-dom";
 
-class LatestNews extends Component {
+class NewsHolder extends Component {
     state = {
         articlesArr: NewsApi.articles
     }
@@ -45,20 +45,15 @@ class LatestNews extends Component {
             elem2.style.display = "inline-block";
         }
     }
-
     render() {
         return (
             <React.Fragment>
                 <article className="latestnews">
                     <div className="latestnews-holder">
                         <div className="container">
-                            <section className="latestnews-header">
-                                <h2 className="latestnews-header-title">LatestNews</h2>
-                                <Link className="latestnews-header-viewall" to="/news">View All<span className="arrow-right"></span></Link>
-                            </section>
                             <div className="row">
-                                {this.state.articlesArr.map(data => {
-                                    return data.showOnHomepage === true ?
+                                {this.state.articlesArr.map((data, index) => {
+                                    return index < 12 ?
                                         <NewsCard
                                             key={data.id}
                                             data={data}
@@ -75,4 +70,4 @@ class LatestNews extends Component {
     }
 }
 
-export default LatestNews;
+export default NewsHolder;

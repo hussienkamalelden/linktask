@@ -3,6 +3,7 @@ import "./navbar_style.scss"
 import logo from "../../assets/images/logo.png"
 import profile_pic from "../../assets/images/profile_pic.png"
 import { Dropdown } from "react-bootstrap"
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
     state = {}
@@ -106,16 +107,18 @@ class Navbar extends Component {
                                     {/* Start Top Section */}
                                     <div className="dropdown-right-top">
                                         <ul className="nav-dropdown-top-ul">
-                                            <li className="nav-dropdown-top-li"><a className="nav-dropdown-main-links nav-dropdown-links-active" href="/#">Home</a></li>
+                                            <li className="nav-dropdown-top-li">
+                                                <Link className="nav-dropdown-main-links nav-dropdown-links-active" to="/">Home</Link></li>
                                             <li className="nav-dropdown-top-li"><a className="nav-dropdown-main-links" href="/#">About us</a>
                                                 <ul className="nav-dropdown-top-sub-ul">
                                                     <li className="nav-dropdown-top-sub-li"><a href="/#" className="nav-dropdown-main-sub-links">who are us</a></li>
                                                     <li className="nav-dropdown-top-sub-li"><a href="/#" className="nav-dropdown-main-sub-links">why us?</a></li>
                                                 </ul>
                                             </li>
-                                            <li className="nav-dropdown-top-li"><a className="nav-dropdown-main-links" href="/#">News</a>
+                                            <li className="nav-dropdown-top-li"><Link className="nav-dropdown-main-links" to="/news">News</Link>
                                                 <ul className="nav-dropdown-top-sub-ul">
-                                                    <li className="nav-dropdown-top-sub-li"><a href="/#" className="nav-dropdown-main-sub-links">News</a></li>
+                                                    <li className="nav-dropdown-top-sub-li"><Link className="nav-dropdown-main-sub-links" to="/news">News</Link>
+                                                    </li>
                                                     <li className="nav-dropdown-top-sub-li"><a href="/#" className="nav-dropdown-main-sub-links">Events</a></li>
                                                 </ul>
                                             </li>

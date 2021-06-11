@@ -3,6 +3,7 @@
 .news-card {
     margin-bottom: 1rem;
     .news-card-holder {
+        background-color: $whiteColor;
         box-shadow: $regular-box-shadow;
         border: 2px solid $twelfthColor;
         border-radius: 5px;

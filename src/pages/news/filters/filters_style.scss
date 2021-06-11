@@ -1,0 +1,16 @@
+@import "../../../assets/styles/placeholders.scss";
+
+.filters {
+    margin-top: 2rem;
+    .filters-holder {
+        @include flex(flex-start, flex-start, row, wrap);
+        .filters-from-box,
+        .filters-to-box {
+            margin-right: 1rem;
+            .filters-box-title {
+                font-size: 14px;
+                margin-bottom: 0.1rem;
+            }
+        }
+    }
+}
