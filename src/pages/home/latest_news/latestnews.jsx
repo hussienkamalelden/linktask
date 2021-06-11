@@ -9,21 +9,39 @@ class LatestNews extends Component {
     }
 
     // onclick Share Toggle ..
-    shareToggle = (data) => {
-        let shareIconHolder = document.querySelector('.setting-share-links-holder')
-        shareIconHolder.classList.toggle('setting-share-links-holder-active');
+    shareToggle = (id) => {
+        let shareIconHolder = document.querySelectorAll('.setting-share-links-holder')
+        let elem;
+        for (let index = 0; index < shareIconHolder.length; index++) {
+            if (shareIconHolder[index].classList.contains(id) === true) {
+                elem = shareIconHolder[index];
+            }
+        }
+        // console.log(elem);
+        elem.classList.toggle('setting-share-links-holder-active');
     }
     // Start Favourite Activation ..
-    favActivation = (data) => {
-        console.log(data)
-        let favIconDeactivate = document.querySelector(".setting-fav-icon");
-        let favIconActivate = document.querySelector(".setting-fav-icon-active");
-        if (window.getComputedStyle(favIconActivate).display === "none") {
-            favIconDeactivate.style.display = "none";
-            favIconActivate.style.display = "inline-block";
+    favActivation = (id) => {
+        let favIconDeactivate = document.querySelectorAll(".setting-fav-icon");
+        let favIconActivate = document.querySelectorAll(".setting-fav-icon-active");
+        let elem;
+        let elem2;
+        for (let index = 0; index < favIconActivate.length; index++) {
+            if (favIconActivate[index].classList.contains(id) === true) {
+                elem = favIconActivate[index];
+            }
+        }
+        for (let index = 0; index < favIconDeactivate.length; index++) {
+            if (favIconDeactivate[index].classList.contains(id) === true) {
+                elem2 = favIconDeactivate[index];
+            }
+        }
+        if (window.getComputedStyle(elem).display === "none") {
+            elem2.style.display = "none";
+            elem.style.display = "inline-block";
         } else {
-            favIconActivate.style.display = "none";
-            favIconDeactivate.style.display = "inline-block";
+            elem.style.display = "none";
+            elem2.style.display = "inline-block";
         }
     }
 
@@ -36,13 +54,13 @@ class LatestNews extends Component {
                             <h2 className="latestnews-title">LatestNews</h2>
                             <div className="row">
                                 {this.state.articlesArr.map(data => {
-                                    if (data.showOnHomepage === true) {
-                                        return <NewsCard
+                                    return data.showOnHomepage === true ?
+                                        <NewsCard
                                             key={data.id}
                                             data={data}
                                             shareToggle={this.shareToggle}
-                                            favActivation={this.favActivation} />
-                                    }
+                                            favActivation={this.favActivation} /> : '';
+
                                 })}
                             </div>
                         </div>

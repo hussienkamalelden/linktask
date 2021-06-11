@@ -9,24 +9,24 @@ class NewsCard extends Component {
             <React.Fragment>
                 <article id={this.props.data.id} className="news-card col-xl-4 col-md-6 col-12">
                     <div className="news-card-holder">
-                        <img className="news-card-image" src={this.props.data.urlToImage} alt="news card image" />
+                        <img className="news-card-image" src={this.props.data.urlToImage} alt="news card" />
                         <section className="news-card-content">
                             {/* Start Card Settings */}
                             <section className="news-card-setting">
                                 {/* Start Favourite Settings */}
                                 <div className="news-card-setting-fav">
-                                    <i className="setting-icon setting-fav-icon far fa-heart" onClick={() => { this.props.favActivation(this.props.data.id) }}></i>
-                                    <i className="setting-icon setting-fav-icon-active fas fa-heart" onClick={() => { this.props.favActivation(this.props.data.id) }}></i>
+                                    <i className={`setting-icon setting-fav-icon ${this.props.data.id} far fa-heart`} onClick={() => { this.props.favActivation(this.props.data.id) }}></i>
+                                    <i className={`setting-icon setting-fav-icon-active ${this.props.data.id} fas fa-heart`} onClick={() => { this.props.favActivation(this.props.data.id) }}></i>
                                 </div>
                                 {/* End Favourite Settings */}
 
                                 {/* Start Share Settings */}
                                 <div className="news-card-setting-share">
                                     <i className="setting-icon setting-share-icon fas fa-share-alt" onClick={() => { this.props.shareToggle(this.props.data.id) }}></i>
-                                    <div className="setting-share-links-holder">
-                                        <a className="setting-share-links" href="#"><i className="setting-share-links-icon fab fa-facebook-f"></i></a>
-                                        <a className="setting-share-links" href="#"><i className="setting-share-links-icon fab fa-twitter"></i></a>
-                                        <a className="setting-share-links" href="#"><i className="setting-share-links-icon fas fa-envelope"></i></a>
+                                    <div className={`setting-share-links-holder ${this.props.data.id}`}>
+                                        <a className="setting-share-links" href="/#"><i className="setting-share-links-icon fab fa-facebook-f"></i></a>
+                                        <a className="setting-share-links" href="/#"><i className="setting-share-links-icon fab fa-twitter"></i></a>
+                                        <a className="setting-share-links" href="/#"><i className="setting-share-links-icon fas fa-envelope"></i></a>
                                     </div>
                                 </div>
                                 {/* End Share Settings */}

@@ -31,7 +31,7 @@
         }
         .how-helpers-holder {
             margin-top: 6rem;
-            @include flex(start, center, row, wrap);
+            @include flex(flex-start, center, row, wrap);
             .how-helpers-helper {
                 border: 3px solid $whiteColor;
                 padding: 1rem;

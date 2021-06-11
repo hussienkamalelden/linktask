@@ -16,7 +16,7 @@
         .news-card-content {
             padding: 1rem;
             .news-card-setting {
-                @include flex(start, flex-end, row, nowrap);
+                @include flex(flex-start, flex-end, row, nowrap);
                 margin-bottom: 0.5rem;
                 .news-card-setting-fav,
                 .news-card-setting-share {
@@ -40,7 +40,7 @@
                         opacity: 0;
                         visibility: hidden;
                         transition: $transition-200ms;
-                        @include flex(start, start, row, nowrap);
+                        @include flex(flex-start, flex-start, row, nowrap);
                         .setting-share-links {
                             background-color: $twitterColor;
                             transition: $transition-200ms;
@@ -82,7 +82,7 @@
             .news-card-tags {
                 width: 100%;
                 margin-bottom: 0.5rem;
-                @include flex(start, start, row, wrap);
+                @include flex(flex-start, flex-start, row, wrap);
                 .card-tags {
                     font-size: 15px;
                     background-color: $twelfthColor;

@@ -12,17 +12,17 @@ class Footer extends Component {
                             <div className="row">
                                 <section className="cols col1 col-lg-2 col-12">
                                     <ul className="ulist-box">
-                                        <li className="litems"><a className="links" href="#">News</a></li>
-                                        <li className="litems"><a className="links" href="#">Events</a></li>
-                                        <li className="litems"><a className="links" href="#">About</a></li>
-                                        <li className="litems"><a className="links" href="#">FAQs</a></li>
+                                        <li className="litems"><a className="links" href="/#">News</a></li>
+                                        <li className="litems"><a className="links" href="/#">Events</a></li>
+                                        <li className="litems"><a className="links" href="/#">About</a></li>
+                                        <li className="litems"><a className="links" href="/#">FAQs</a></li>
                                     </ul>
                                 </section>
                                 <section className="cols col2 col-lg-3 col-12">
                                     <ul className="ulist-box">
-                                        <li className="litems"><a className="links" href="#">Privacy Policy</a></li>
-                                        <li className="litems"><a className="links" href="#">Contact Us</a></li>
-                                        <li className="litems"><a className="links" href="#">Complains</a></li>
+                                        <li className="litems"><a className="links" href="/#">Privacy Policy</a></li>
+                                        <li className="litems"><a className="links" href="/#">Contact Us</a></li>
+                                        <li className="litems"><a className="links" href="/#">Complains</a></li>
                                     </ul>
                                 </section>
                                 <section className="cols col3 col-lg-4 col-12">
@@ -35,11 +35,11 @@ class Footer extends Component {
                                 <section className="cols col4 col-lg-3 col-12">
                                     <span className="follow-title titles">Follow us on</span>
                                     <div className="social-box">
-                                        <a className="social-links" href="#"><i className="icons fab fa-instagram"></i></a>
-                                        <a className="social-links" href="#"><i className="icons fab fa-youtube"></i></a>
-                                        <a className="social-links" href="#"><i className="icons fab fa-linkedin-in"></i></a>
-                                        <a className="social-links" href="#"><i className="icons fab fa-facebook-f"></i></a>
-                                        <a className="social-links" href="#"><i className="icons fab fa-twitter"></i></a>
+                                        <a className="social-links" href="/#"><i className="icons fab fa-instagram"></i></a>
+                                        <a className="social-links" href="/#"><i className="icons fab fa-youtube"></i></a>
+                                        <a className="social-links" href="/#"><i className="icons fab fa-linkedin-in"></i></a>
+                                        <a className="social-links" href="/#"><i className="icons fab fa-facebook-f"></i></a>
+                                        <a className="social-links" href="/#"><i className="icons fab fa-twitter"></i></a>
                                     </div>
                                 </section>
                             </div>

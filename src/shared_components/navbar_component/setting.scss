@@ -38,7 +38,7 @@
             display: block;
         }
         .setting-drop-fonts-holder {
-            @include flex(start, start, row, wrap);
+            @include flex(flex-start, flex-start, row, wrap);
             padding-left: 7px;
             .setting-drop-item {
                 width: auto;

@@ -29,7 +29,7 @@ footer {
             }
             .subscribe-box {
                 margin-top: 0.5rem;
-                @include flex(start, left, row, nowrap);
+                @include flex(flex-start, left, row, nowrap);
                 .inputs {
                     border: none;
                     outline: none;
@@ -54,7 +54,7 @@ footer {
             }
             .social-box {
                 margin-top: 0.5rem;
-                @include flex(start, left, row, nowrap);
+                @include flex(flex-start, left, row, nowrap);
                 .social-links {
                     margin-right: 20px;
                     .icons {

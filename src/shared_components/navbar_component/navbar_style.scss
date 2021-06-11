@@ -13,10 +13,10 @@
         height: 65px;
         .holder {
             position: relative;
-            @include flex(start, start, row, wrap);
+            @include flex(flex-start, flex-start, row, wrap);
             width: 100%;
             .nav-left {
-                @include flex(start, start, row, wrap);
+                @include flex(flex-start, flex-start, row, wrap);
                 .menu-icon {
                     cursor: pointer;
                     margin: 8px 30px 0 0;
@@ -32,7 +32,7 @@
                 // Start Main User Account //
                 .main-user-acc {
                     @extend .user-acc;
-                    @include flex(start, start, row, wrap);
+                    @include flex(flex-start, flex-start, row, wrap);
                     padding: 0;
                     margin: 2px 1.5rem 0 0;
                 }
@@ -51,7 +51,7 @@
             display: none;
             height: 91vh;
             border-top: 1px solid $ninthColor;
-            @include flex(start, start, row, wrap);
+            @include flex(flex-start, flex-start, row, wrap);
             // Start Dropdown Left//
             .dropdown-left {
                 position: relative;
@@ -198,11 +198,11 @@
                 .dropdown-right {
                     width: 200px;
                     .search-box {
-                        @include flex(start, left, row, nowrap);
+                        @include flex(flex-start, left, row, nowrap);
                     }
                     .dropdown-right-bottom {
                         .user-acc {
-                            @include flex(start, start, row, wrap);
+                            @include flex(flex-start, flex-start, row, wrap);
                         }
                     }
                 }

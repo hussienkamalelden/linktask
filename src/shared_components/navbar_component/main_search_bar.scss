@@ -1,6 +1,6 @@
 // Start Search Box//
 .main-search-box {
-	@include flex(start, start, row, nowrap);
+	@include flex(flex-start, flex-start, row, nowrap);
 	position: relative;
 	width: 300px;
 	direction: rtl;
