@@ -19,7 +19,7 @@ class Navbar extends Component {
         document.querySelector(".search").style.visibility = "visible";
         document.querySelector(".search").style.width = "85%";
         document.querySelector(".submit-overlay").style.display = "none";
-        document.querySelector(".submit").style.backgroundColor = "/#2d717b";
+        document.querySelector(".submit").style.backgroundColor = "#2d717b";
     }
     render() {
         return (
@@ -39,13 +39,13 @@ class Navbar extends Component {
                                     </a>
                                 </section>
                                 <section className="nav-right">
-                                    {/* Start Search Section */}
+                                    {/* Start Main Search Section */}
                                     <form className="main-search-box">
                                         <div className="submit-overlay" onClick={this.expandSearch}></div>
                                         <input className="submit inputs" type="submit" value="" />
                                         <input className="search inputs" type="search" name="search" placeholder="Search" required />
                                     </form>
-                                    {/* End Search Section */}
+                                    {/* End Main Search Section */}
                                     {/* Start Notifications Section */}
                                     <Dropdown className="notif-dropdown">
                                         <Dropdown.Toggle className="notif-dropdown-toggle" id="dropdown-basic">

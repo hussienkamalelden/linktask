@@ -48,8 +48,8 @@ class NewsHolder extends Component {
     render() {
         return (
             <React.Fragment>
-                <article className="latestnews">
-                    <div className="latestnews-holder">
+                <article className="news-holder">
+                    <div className="news-holder-holder">
                         <div className="container">
                             <div className="row">
                                 {this.state.articlesArr.map((data, index) => {
