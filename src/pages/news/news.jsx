@@ -7,6 +7,9 @@ import "./news_style.scss"
 
 class News extends Component {
     state = {}
+    componentDidMount() {
+        document.title = "News"
+    }
     render() {
         return (
             <React.Fragment>

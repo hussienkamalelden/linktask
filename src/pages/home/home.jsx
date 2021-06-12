@@ -5,6 +5,9 @@ import How from './how/how';
 
 class Home extends Component {
     state = {}
+    componentDidMount() {
+        document.title = "Home"
+    }
     render() {
         return (
             <React.Fragment>

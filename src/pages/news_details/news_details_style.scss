@@ -1,0 +1,10 @@
+@import "../../assets/styles/placeholders.scss";
+
+.bg-holder {
+    background-color: $fourthColor;
+}
+
+// Start Media Query //
+@include media-breakpoint-down(lg) {
+}
+// End Media Query //

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "./news_holder_style.scss";
 import NewsCard from '../../../shared_components/news_card_component/news_card';
 import NewsApi from '../../../newsapi.json';
-import { Link } from "react-router-dom";
 
 class NewsHolder extends Component {
     state = {
