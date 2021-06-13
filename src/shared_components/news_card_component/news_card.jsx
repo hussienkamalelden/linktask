@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./news_card_style.scss"
+import { Link } from 'react-router-dom';
 
 class NewsCard extends Component {
     state = {}
@@ -9,7 +10,8 @@ class NewsCard extends Component {
             <React.Fragment>
                 <article id={this.props.data.id} className="news-card col-xl-4 col-md-6 col-12">
                     <div className="news-card-holder">
-                        <img className="news-card-image" src={this.props.data.urlToImage} alt="news card" />
+                        <Link className="news-card-link" to={{ pathname: '/newsdetails', state: { id: this.props.data.id, data: this.props.data } }}>
+                            <img className="news-card-image" src={this.props.data.urlToImage} alt="news card" /></Link>
                         <section className="news-card-content">
                             {/* Start Card Settings */}
                             <section className="news-card-setting">
@@ -33,27 +35,29 @@ class NewsCard extends Component {
                             </section>
                             {/* End Card Settings */}
 
-                            {/* Start Card Title */}
-                            <h4 className="news-card-title">{this.props.data.title}</h4>
-                            {/* End Card Title */}
+                            <Link className="news-card-link" to={{ pathname: '/newsdetails', state: { id: this.props.data.id, data: this.props.data } }}>
+                                {/* Start Card Title */}
+                                <h4 className="news-card-title">{this.props.data.title}</h4>
+                                {/* End Card Title */}
 
-                            {/* Start Card Tags */}
-                            <section className="news-card-tags">
-                                <span className="card-tags">News</span>
-                                <span className="card-tags">Products</span>
-                            </section>
-                            {/* End Card Tags */}
+                                {/* Start Card Tags */}
+                                <section className="news-card-tags">
+                                    <span className="card-tags">News</span>
+                                    <span className="card-tags">Products</span>
+                                </section>
+                                {/* End Card Tags */}
 
-                            {/* Start Card Paragraph */}
-                            <p className="news-card-p">{this.props.data.content != null ? this.props.data.content : this.props.data.description}</p>
-                            {/* End Card Paragraph */}
+                                {/* Start Card Paragraph */}
+                                <p className="news-card-p">{this.props.data.content != null ? this.props.data.content : this.props.data.description}</p>
+                                {/* End Card Paragraph */}
 
-                            {/* Start Card Date */}
-                            <section className="date-holder">
-                                <i className="date-icon far fa-calendar-alt"></i>
-                                <span className="date-text">{this.props.data.publishedAt}</span>
-                            </section>
-                            {/* End Card Date */}
+                                {/* Start Card Date */}
+                                <section className="date-holder">
+                                    <i className="date-icon far fa-calendar-alt"></i>
+                                    <span className="date-text">{this.props.data.publishedAt}</span>
+                                </section>
+                                {/* End Card Date */}
+                            </Link>
                         </section>
                     </div>
                 </article>

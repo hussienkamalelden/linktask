@@ -1,5 +1,10 @@
 @import "../../assets/styles/placeholders.scss";
 
+.news-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
 .news-card {
     margin-bottom: 1rem;
     .news-card-holder {
@@ -8,6 +13,7 @@
         border: 2px solid $twelfthColor;
         border-radius: 5px;
         height: 100%;
+        transition: $transition-200ms;
         .news-card-image {
             border-radius: 5px 5px 0 0;
             width: 100%;
@@ -114,6 +120,9 @@
                     font-weight: 500;
                 }
             }
+        }
+        &:hover {
+            box-shadow: $strong-box-shadow;
         }
     }
 }
