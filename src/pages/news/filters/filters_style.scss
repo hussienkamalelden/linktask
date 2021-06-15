@@ -83,6 +83,7 @@
         // End Category Box //
         // Start Search Box //
         .filters-search-box {
+            margin-right: 10px;
             .filters-search-box-holder {
                 margin-top: 1.3rem;
                 @include flex(flex-start, flex-start, row, nowrap);
@@ -118,15 +119,50 @@
         // End Search Box //
         // Start Sort Box //
         .filters-sort-box {
-            .filters-sort-box-title {
-                color: $firstColor;
-                cursor: pointer;
-                margin-top: 2rem;
-                display: inline-block;
-                &::after {
-                    content: "\21C5";
+            .filters-sort-box-toggle {
+                margin-top: 1.3rem;
+                background-color: transparent;
+                height: 45px;
+                padding: 0 0.5rem;
+                border: none;
+                box-shadow: none;
+                outline: none;
+                .filters-sort-box-title {
                     color: $firstColor;
-                    margin-left: 0.3rem;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-size: 15px;
+                    &::after {
+                        content: "\21C5";
+                        color: $firstColor;
+                        margin-left: 0.3rem;
+                    }
+                }
+                &::after {
+                    border: none;
+                }
+                &:focus {
+                    border: none;
+                    box-shadow: none;
+                }
+                &:hover {
+                    background-color: $secondColor;
+                    color: $thirdColor;
+                    border: none;
+                    box-shadow: none;
+                    .filters-sort-box-title {
+                        &::after {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+            .filters-sort-box-menu {
+                min-width: 120px;
+                .filters-sort-box-item {
+                    line-height: 1;
+                    font-weight: 500;
+                    font-size: 15px;
                 }
             }
         }
@@ -157,11 +193,6 @@
             .filters-search-box {
                 .filters-search-box-holder {
                     width: 100%;
-                }
-            }
-            .filters-sort-box {
-                .filters-sort-box-title {
-                    margin-top: 1rem;
                 }
             }
         }

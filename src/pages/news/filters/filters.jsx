@@ -68,7 +68,16 @@ class Filters extends Component {
                             {/* End Search Box */}
                             {/* Start Sort Box */}
                             <section className="filters-sort-box">
-                                <span className="filters-sort-box-title">Sort by</span>
+                                <Dropdown>
+                                    <Dropdown.Toggle className="filters-sort-box-toggle" variant="success" id="dropdown-basic">
+                                        <span className="filters-sort-box-title">Sort by</span>
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu className="filters-sort-box-menu">
+                                        <Dropdown.Item className="filters-sort-box-item" href="#/action-1">A to Z</Dropdown.Item>
+                                        <div class="dropdown-divider" role="separator"></div>
+                                        <Dropdown.Item className="filters-sort-box-item" href="#/action-2">Z to A</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
                             </section>
                             {/* End Sort Box */}
                         </section>
