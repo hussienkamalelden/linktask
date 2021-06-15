@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import "./news_holder_style.scss";
 import NewsCard from '../../../shared_components/news_card_component/news_card';
-import NewsApi from '../../../newsapi.json';
 
 class NewsHolder extends Component {
     state = {
-        articlesArr: NewsApi.articles
+        articlesArr: this.props.data
     }
 
     // onclick Share Toggle ..
@@ -51,7 +50,7 @@ class NewsHolder extends Component {
                     <div className="news-holder-holder">
                         <div className="container">
                             <div className="row">
-                                {this.state.articlesArr.map((data, index) => {
+                                {this.props.data.map((data, index) => {
                                     return index < 12 ?
                                         <NewsCard
                                             key={data.id}

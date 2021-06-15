@@ -3,7 +3,15 @@ import { Dropdown } from "react-bootstrap"
 import "./filters_style.scss";
 
 class Filters extends Component {
-    state = {}
+    state = {
+        searchResult: ""
+    }
+
+    handleChange = ({ target }) => {
+        this.setState({
+            searchResult: target.value
+        });
+    }
 
     render() {
         return (
@@ -51,12 +59,12 @@ class Filters extends Component {
                             </section>
                             {/* End Category Box */}
                             {/* Start Search Box */}
-                            <section className="filters-search-box filters-boxes">
+                            <form className="filters-search-box filters-boxes" onSubmit={e => e.preventDefault()}>
                                 <div className="filters-search-box-holder">
-                                    <input className="filters-search-box-area" type="search" placeholder="Search Services" />
-                                    <input className="filters-search-box-submit" type="submit" value="" />
+                                    <input className="filters-search-box-area" type="search" placeholder="Search Services" onChange={this.handleChange} />
+                                    <input className="filters-search-box-submit" type="submit" value="" onClick={() => { this.props.search(this.state.searchResult) }} />
                                 </div>
-                            </section>
+                            </form>
                             {/* End Search Box */}
                             {/* Start Sort Box */}
                             <section className="filters-sort-box">
