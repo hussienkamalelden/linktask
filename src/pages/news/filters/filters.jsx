@@ -61,7 +61,7 @@ class Filters extends Component {
                             {/* Start Search Box */}
                             <form className="filters-search-box filters-boxes" onSubmit={e => e.preventDefault()}>
                                 <div className="filters-search-box-holder">
-                                    <input className="filters-search-box-area" type="search" placeholder="Search Services" onChange={this.handleChange} />
+                                    <input className="filters-search-box-area" type="search" placeholder="Search News" onChange={this.handleChange} />
                                     <input className="filters-search-box-submit" type="submit" value="" onClick={() => { this.props.search(this.state.searchResult) }} />
                                 </div>
                             </form>
@@ -73,9 +73,9 @@ class Filters extends Component {
                                         <span className="filters-sort-box-title">Sort by</span>
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu className="filters-sort-box-menu">
-                                        <Dropdown.Item className="filters-sort-box-item" href="#/action-1">A to Z</Dropdown.Item>
-                                        <div class="dropdown-divider" role="separator"></div>
-                                        <Dropdown.Item className="filters-sort-box-item" href="#/action-2">Z to A</Dropdown.Item>
+                                        <Dropdown.Item id="filters-sort-box-item-1" className="filters-sort-box-item" onClick={this.props.sortAscending}>A to Z</Dropdown.Item>
+                                        <div className="dropdown-divider" role="separator"></div>
+                                        <Dropdown.Item id="filters-sort-box-item-2" className="filters-sort-box-item" onClick={this.props.sortDescending}>Z to A</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </section>
